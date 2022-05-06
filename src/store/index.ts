@@ -1,14 +1,12 @@
-import { createStore } from 'vuex'
+import { createStore, Module } from 'vuex-smart-module';
+import { quizModule } from './modules/quizModule/store';
 
-export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+const root = new Module({
   modules: {
+    quizModule
   }
 })
+
+const store = createStore(root);
+
+export default store;
