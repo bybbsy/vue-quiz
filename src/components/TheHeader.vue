@@ -11,9 +11,8 @@
             <li class="header__item">
               <router-link to="/quizzes" class="header__link">Quiezzes</router-link>
             </li>
-
             <li class="header__item">
-              <router-link to="/docs" class="header__link">Docs</router-link>
+              <a href="https://github.com/bybbsy/vue-quiz" class="header__link">Docs</a>
             </li>
           </ul>
         </nav>
