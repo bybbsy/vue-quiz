@@ -64,7 +64,7 @@
 </template>
 
 <script lang="ts">
-import { Choice, QuestionModel, Quiz } from '@/store/modules/quizModule/types'
+import { Choice, Question, Quiz } from '@/store/modules/quizModule/types'
 import { computed, defineComponent, onBeforeUnmount, PropType, reactive } from 'vue'
 
 export default defineComponent({
@@ -137,7 +137,7 @@ export default defineComponent({
       }
     }
 
-    const handleQuizAnswer = (question: QuestionModel, choice: Choice) => {
+    const handleQuizAnswer = (question: Question, choice: Choice) => {
       clearTimeout(timeId);
 
       if(choice.truthy === false) {

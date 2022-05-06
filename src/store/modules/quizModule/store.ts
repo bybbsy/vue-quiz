@@ -1,5 +1,5 @@
 import { Actions, Getters, Module, Mutations } from "vuex-smart-module";
-import { Answer, Choice, QuestionModel, QuestionResult, Quiz, QuizModel, QuizResult } from "./types";
+import { Choice, Question, QuestionResult, Quiz, QuizModel, QuizResult } from "./types";
 
 class QuizState implements QuizModel {
   isQuiz = false
@@ -44,7 +44,7 @@ class QuizMutations extends Mutations<QuizState> {
     this.state.quizResult = data
   }
 
-  setAnswer(payload: { question: QuestionModel, result: QuestionResult}) {
+  setAnswer(payload: { question: Question, result: QuestionResult}) {
     payload.question.result = payload.result;
   }
 
@@ -639,7 +639,7 @@ class QuizActions extends Actions<QuizState, QuizGetters, QuizMutations> {
     }
   }
 
-  setAnswer(payload: { question: QuestionModel, choice: Choice}): void {
+  setAnswer(payload: { question: Question, choice: Choice}): void {
     const result: QuestionResult = payload.choice.truthy ? 'right' : 'wrong';
 
     this.commit('setAnswer', { question: payload.question, result })

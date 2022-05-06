@@ -46,8 +46,10 @@
 }
 
 .header__title {
+  font-family: 'Passion one', cursive;
+  /* letter-spacing: ; */
   color: rgb(242, 237, 237);
-  font-size: 2em;
+  font-size: 2.5em;
   font-variant: small-caps;
 }
 

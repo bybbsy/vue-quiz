@@ -103,7 +103,7 @@ export default defineComponent({
   color: #ffff;
   padding: 10px 15px 25px;
   border-radius: 5px;
-  width: 100%;
+  /* width: 100%; */
   height: 100%; 
   min-height: 30rem;
 }

@@ -2,11 +2,26 @@
   <router-view/>
 </template>
 
+<script setup lang="ts">
+import { onMounted } from 'vue';
+ 
+
+onMounted(async () => {
+  const res = await fetch('https://api.npoint.io/f8af70ec660f16f5456a')
+})
+
+</script>
+
 <style>
+html, body, *  {
+  box-sizing: border-box;
+}
+
 body {
   width: 100%;
   height: 100vh;
   margin: 0;
+  overflow: hidden;
 }
 
 #app {
@@ -30,6 +45,10 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+li {
+  list-style: none;
 }
 
 .content-container_medium {
