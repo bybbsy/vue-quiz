@@ -170,6 +170,7 @@ const handleStartQuiz = (index: number) => quizContext.actions.openQuiz(index)
   padding: 5px 7px;
   border-radius: 10px;
   cursor: pointer;
+  border: 1px solid rgba(134, 134, 134, 1);
 }
 
 .v-enter-active,
